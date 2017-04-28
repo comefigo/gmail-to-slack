@@ -23,8 +23,6 @@ function gmail2Slack() {
 
     for (var i = 0; i < count; i++) {
         var thread = threads[i];
-        var lastDate = thread.getLastMessageDate();
-        var datetime = lastDate.getFullYear() + "/" + (lastDate.getMonth() + 1) + "/" + lastDate.getDate() + " " + lastDate.getHours() + ":" + lastDate.getMinutes() + ":" + lastDate.getSeconds();
 
         //チャット、スパム、ごみ箱以外
         if (thread.isInChats() || thread.isInSpam() && thread.isInTrash()) {
